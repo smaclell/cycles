@@ -35,6 +35,9 @@ local.properties
 node_modules/
 npm-debug.log
 
+# sublime
+*.sublime-workspace
+
 # BUCK
 buck-out/
 \.buckd/
