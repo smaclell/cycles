@@ -50,4 +50,15 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('cycles', () => cycles);
+const store = configureStore();
+class Apple extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <cycles />
+      </Provider>
+    )
+  }
+}
+
+AppRegistry.registerComponent('cycles', () => Apple);
