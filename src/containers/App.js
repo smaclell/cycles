@@ -6,8 +6,9 @@ const Container = props => (
   <App {...props} />
 );
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
   return {
+    ...ownProps,
     topics: state.lists.default.map(id => ({
       id,
       ...state.topics[id]

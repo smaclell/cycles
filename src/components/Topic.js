@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
   }
 });
 
-const Topic = ({id, title, background: {url, width, height}}) => (
-  <TouchableHighlight style={styles.container}>
+const Topic = ({onPress, id, title, background: {url, width, height}}) => (
+  <TouchableHighlight style={styles.container} onPress={onPress}>
     <View>
       <Image source={{uri: url}} style={{width, height}} />
       <Text style={styles.title}>{title}</Text>
@@ -36,6 +36,7 @@ Topic.propTypes = {
   id: React.PropTypes.number.isRequired,
   title: React.PropTypes.string.isRequired,
   background: React.PropTypes.object.isRequired,
+  onPress: React.PropTypes.func.isRequired,
 };
 
 export default Topic;

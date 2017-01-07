@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#111111',
   },
   welcome: {
-    fontSize: 20,
+    fontSize: 32,
     textAlign: 'center',
     margin: 10,
     color: '#ddd',
@@ -35,7 +35,7 @@ class App extends Component {
           Welcome to Cycles!
         </Text>
         <ScrollView style={styles.topics}>
-          {this.props.topics.map(t => <Topic key={t.id} {...t} />)}
+          {this.props.topics.map(t => <Topic key={t.id} {...t} onPress={() => this.props.onTopicPress(t.id)} />)}
         </ScrollView>
       </View>
     );
@@ -44,6 +44,7 @@ class App extends Component {
 
 App.propTypes = {
   topics: React.PropTypes.array.isRequired,
+  onTopicPress: React.PropTypes.func.isRequired,
 };
 
 export default App;
