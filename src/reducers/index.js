@@ -23,7 +23,7 @@ const topics = {
       width: 243,
       height: 243,
     },
-    title: 'FaithTech in 2016',
+    title: 'FaithTech in 2017',
   },
 };
 
